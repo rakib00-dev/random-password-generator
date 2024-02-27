@@ -8,6 +8,45 @@
     <title>Random Password Generator</title>
   </head>
   <body>
+    <div id="passBody">
+      <div id="display">
+        <input type="text" id="password" placeholder="password" />
+      </div>
+      <div id="passContent">
+        <div id="passLength">
+          <h5>Password Length</h5>
+          <input
+            type="number"
+            min="4"
+            max="32"
+            value="8"
+            id="password"
+            placeholder="password"
+          />
+        </div>
+        <div id="boxes">
+          <h3>what do you want?</h3>
+          <div class="box">
+            <label for="upperCase"><h5>Uppercase</h5></label>
+            <input type="checkbox" name="" id="upperCase" />
+          </div>
+          <div class="box">
+            <label for="lowerCase"><h5>lowercase</h5></label>
+            <input type="checkbox" name="" id="lowerCase" />
+          </div>
+          <div class="box">
+            <label for="number"><h5>Number</h5></label>
+            <input type="checkbox" name="" id="number" />
+          </div>
+          <div class="box">
+            <label for="symble"><h5>Symble</h5></label>
+            <input type="checkbox" name="" id="symble" />
+          </div>
+        </div>
+        <div id="button"><button>Generat</button></div>
+      </div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
