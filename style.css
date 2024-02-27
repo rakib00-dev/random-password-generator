@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   box-sizing: border-box;
@@ -10,26 +13,152 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white;
+}
+
+#bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #99c4b0;
+  filter: blur(2px);
 }
 
 #passBody {
-  width: 659px;
+  position: relative;
+  width: 259px;
+  height: fit-content;
   padding: 20px;
-  border: 1px solid red;
+  border-radius: 8px;
+  z-index: 12px;
+  overflow: hidden;
+  background-color: #0a0e31;
 }
 
-#boxes {
+#display input {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+#display input::placeholder {
+  color: white;
+}
+
+#passContent p {
+  font-size: 12px;
+  color: #b8b8b8;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+#lengthValue {
+  color: white;
+  font-weight: 800;
+}
+
+#passLength {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+}
+
+#passLength input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  position: relative;
+  width: 80%;
+  height: 3px;
+  margin: 10px 10px;
+  outline: none;
+  background: #00ff88;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+#passLength input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#passLength input::after {
+  content: '32';
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  right: -20px;
+  bottom: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#passLength input::before {
+  content: '4';
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  left: -14px;
+  bottom: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='checkbox'] {
+  height: 20px;
+  width: 20px;
+  margin: 10px 17px;
+  appearance: none;
+  -webkit-appearance: none;
+  left: 17px;
+  position: relative;
+  background: #242525;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+  background: #00ff88;
+  height: 20px;
+  width: 20px;
 }
 
 .box {
   display: flex;
+  justify-content: space-between;
   gap: 6px;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 .box h5 {
   padding: 10px 0;
+  cursor: pointer;
+}
+
+button {
+  float: right;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  background: #08d173;
+
   cursor: pointer;
 }

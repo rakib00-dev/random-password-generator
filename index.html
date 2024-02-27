@@ -8,23 +8,25 @@
     <title>Random Password Generator</title>
   </head>
   <body>
+    <div id="bg"></div>
     <div id="passBody">
+      <h3>Password Generator</h3>
       <div id="display">
         <input type="text" id="password" placeholder="password" />
       </div>
       <div id="passContent">
+        <p>Length: <span id="lengthValue">12</span></p>
         <div id="passLength">
-          <h5>Password Length</h5>
           <input
-            type="number"
+            type="range"
             min="4"
             max="32"
-            value="8"
-            id="password"
-            placeholder="password"
+            value="12"
+            id="passLengthValue"
           />
         </div>
         <div id="boxes">
+          <p>setup:</p>
           <h3>what do you want?</h3>
           <div class="box">
             <label for="upperCase"><h5>Uppercase</h5></label>
@@ -32,7 +34,7 @@
           </div>
           <div class="box">
             <label for="lowerCase"><h5>lowercase</h5></label>
-            <input type="checkbox" name="" id="lowerCase" />
+            <input type="checkbox" name="" id="lowerCase" checked />
           </div>
           <div class="box">
             <label for="number"><h5>Number</h5></label>
@@ -40,13 +42,14 @@
           </div>
           <div class="box">
             <label for="symble"><h5>Symble</h5></label>
-            <input type="checkbox" name="" id="symble" />
+            <input type="checkbox" name="" id="symble" checked />
           </div>
         </div>
-        <div id="button"><button>Generat</button></div>
+        <div id="button"><button id="btn">Generate</button></div>
       </div>
     </div>
 
     <script src="main.js"></script>
+    <script src="guid.js"></script>
   </body>
 </html>
