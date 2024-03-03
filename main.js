@@ -1,39 +1,36 @@
-let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-let numbers = '0123456789';
-let symb = '!@#$%^&*()_+-=[]{};\':"\\|,.<>/?';
+const lengthValShow = document.getElementById('lengthValue');
+const lengthInput = document.getElementById('passLengthValue');
+const display = document.getElementById('password');
+const button = document.getElementById('btn');
 
-let upp,
-  low,
-  num,
-  sym = true;
-true;
-true;
-true;
-
-let all = '';
-
-if (upp) {
-  all += upperCase;
-}
-if (low) {
-  all += lowerCase;
-}
-if (num) {
-  all += numbers;
-}
-if (sym) {
-  all += Symbol;
+function lengthShow() {
+  lengthValShow.innerHTML = lengthInput.value;
 }
 
-let length = 16;
-let amount = 10;
+setInterval(lengthShow, 10);
 
-let password;
-for (let i = 0; i < amount; i++) {
-  password = all.Math.floor(Math.random() * length.length);
-}
+const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+const upperCase = lowerCase.toUpperCase();
+const number = '0123456789';
+const symble = '!@#$%^&*()_+-=[]{};\':"\\|,.<>/?';
 
-console.log(password);
+const upperCaseInput = document.getElementById('uppercase');
+const lowerCaseInput = document.getElementById('lowercase');
+const numberInput = document.getElementById('number');
+const symbleInput = document.getElementById('symble');
 
-// console.log(all);
+const getRandomData = (dataSet) => {
+  return dataSet[Math.floor(Math.random() * dataSet.length)];
+};
+
+const passwordGenerate = (password = '') => {
+  if (upperCaseInput.clicked) {
+    password += getRandomData(upperCase);
+  }
+
+  console.log(password);
+};
+
+button.addEventListener('click', function () {
+  generatePassword();
+});
