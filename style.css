@@ -161,6 +161,9 @@ button {
   color: white;
   font-weight: 700;
   background: #08d173;
-
   cursor: pointer;
+}
+
+::selection {
+  background: transparent;
 }
